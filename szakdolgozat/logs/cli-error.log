@@ -1,0 +1,621 @@
+2018-01-11 18:45:05 Error: [PDOException] SQLSTATE[HY000] [2002] Nem hozható létre kapcsolat, mert a célszámítógép már visszautasította a kapcsolatot.
+ in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 48
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Connection.php(369): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Connection.php(388): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(109): Cake\Database\Connection->schemaCollection()
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection(Object(Cake\Database\Connection))
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(89): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(500): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-01-11 20:25:43 Error: [PDOException] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(186): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(122): Realestates->change()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:25:43 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:25:43 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:28:20 Error: [PDOException] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(186): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(122): Realestates->change()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:28:20 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:28:20 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:28:58 Error: [PDOException] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(186): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(125): Realestates->up()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:28:58 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:28:58 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:30:28 Error: [PDOException] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(186): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(125): Realestates->up()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:30:28 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:30:28 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:30:45 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(186): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(125): Realestates->up()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:30:46 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:30:46 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:34:50 Error: [PDOException] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(186): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(125): Realestates->up()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:34:50 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:34:50 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:35:05 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(186): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(125): Realestates->up()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:35:05 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:35:05 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:35:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(186): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(125): Realestates->up()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:35:26 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:35:26 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:36:06 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(185): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(125): Realestates->up()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:36:06 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:36:06 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:36:15 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `r...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `r...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111180916_Realestates.php(185): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(125): Realestates->up()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Realestates), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Realestates), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:36:15 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:36:15 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:42:09 Error: [PDOException] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `c...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `c...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111185825_Categories.php(55): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(122): Categories->change()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Categories), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Categories), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:42:09 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:42:09 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:45:31 Error: [Error] Call to undefined method Migrations\Table::setForeignKey() in C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111190037_Images.php on line 23
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(122): Images->change()
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Images), 'up')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Images), 'up')
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-01-11 20:45:31 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:45:31 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:45:52 Error: [Error] Call to undefined method Migrations\Table::setForeignKey() in C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111192048_UsersPhones.php on line 23
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(122): UsersPhones->change()
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(UsersPhones), 'up')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(UsersPhones), 'up')
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-01-11 20:45:52 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:45:52 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:46:44 Error: [PDOException] SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'password' in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 338
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(338): PDO->exec('CREATE TABLE `u...')
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `u...')
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Db\Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Table.php(90): Phinx\Db\Table->create()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\config\Migrations\20180111194614_Users.php(139): Migrations\Table->create()
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(122): Users->change()
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(Users), 'up')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(Users), 'up')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(113): Phinx\Migration\Manager->migrate('default', '20180111194614')
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Command\Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Command\Command.php(252): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(938): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(240): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2018-01-11 20:46:44 Warning: The connection is going to be closed but there is an active transaction.
+2018-01-11 20:46:44 Warning: Warning (2): fwrite(): supplied resource is not a valid stream resource in [C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE\src\Console\ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE\src\Console\ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE\src\Log\Engine\ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE\src\Log\Log.php, line 384
+Cake\Log\Log::warning() - CORE\src\Log\Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE\src\Database\Connection.php, line 133
+[main] - [internal], line ??
+
+
+
+2018-01-11 20:57:57 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ingatlan.t' doesn't exist in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 't', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('t', Array)
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\ORM\Table.php(532): Cake\Database\Schema\CachedCollection->describe('t')
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\ORM\Table.php(653): Cake\ORM\Table->getSchema()
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 't', 'T')
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('T')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\BakeShell.php(264): Bake\Shell\Task\ModelTask->main('T')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('T', 0)
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\BakeShell.php(265): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(493): Bake\Shell\BakeShell->all('t')
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-01-11 20:58:02 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ingatlan.userse' doesn't exist in C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'userse', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('userse', Array)
+#2 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\ORM\Table.php(532): Cake\Database\Schema\CachedCollection->describe('userse')
+#3 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\ORM\Table.php(653): Cake\ORM\Table->getSchema()
+#4 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'userse', 'Userse')
+#7 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('Userse')
+#8 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\BakeShell.php(264): Bake\Shell\Task\ModelTask->main('Userse')
+#9 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Userse', 0)
+#10 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\bake\src\Shell\BakeShell.php(265): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\Shell.php(493): Bake\Shell\BakeShell->all('userse')
+#12 C:\Users\palko\web\htdocs\web\szakdolgozat\vendor\cakephp\cakephp\src\Console\CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Users\palko\web\htdocs\web\szakdolgozat\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+

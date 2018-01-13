@@ -1,0 +1,161 @@
+<?php
+use Migrations\AbstractMigration;
+
+class Realestates extends AbstractMigration
+{
+    /**
+     * Change Method.
+     *
+     * More information on this method is available here:
+     * http://docs.phinx.org/en/latest/migrations.html#the-change-method
+     * @return void
+     */
+    public function change()
+    {
+        $table = $this->table('realestates');
+        $table->addColumn('id', 'integer', [
+            'autoIncrement' => true,
+            'limit' => 10,
+            'null' => false,
+            'signed' => false,
+        ]);
+
+        $table->addColumn('user_id', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('type_id', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('category_id', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('convenience_grade_id', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('heatingtype_id', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('condition_of_property_id', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('parking_id', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('heatingtype_id', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('price', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('rooms_numbers', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('half_room_numbers', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('floor_number', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('floor_number_sum ', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('floor_area', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('land_area', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('elevator', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('external_storage', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('comment', 'text', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('premium', 'datetime', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('visitors', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('built_year', 'date', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('zipCode', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('state', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('city', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('street', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('houseNumber', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('district', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('latitude', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('longitude', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('active', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('created', 'datetime', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('created_by', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('modified', 'datetime', [
+            'default' => null,
+            'null' => false,
+        ]);
+        $table->addColumn('modified_by', '', [
+            'default' => null,
+            'null' => false,
+        ]);
+    }
+}
+  
